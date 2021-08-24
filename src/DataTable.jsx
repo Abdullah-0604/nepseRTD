@@ -16,7 +16,7 @@ function DataTable() {
       redirect: "follow",
     };
 
-    fetch(`/data/todaysprice`, requestOptions)
+    fetch(`https://cors-rest-api.herokuapp.com/todays-price`, requestOptions)
       .then((response) => response.json())
       .then((result) => setRowData(result))
       .catch((error) => console.log("error", error));
